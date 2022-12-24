@@ -16,7 +16,7 @@ func (c *Consumer) Notify(s string) {
 	fmt.Printf("Consumer %s received: '%s'\n", c.Name, s)
 }
 
-type Observed interface {
+type Observable interface {
 	Subscribe(Observer)
 	Unsubscribe(Observer)
 	Emit(string)
